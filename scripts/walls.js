@@ -15,5 +15,3 @@ let hugeTitaniumWall = extend(Wall, "huge-copper-wall", {
     buildVisibility: BuildVisibility.shown,
     research: Blocks.largeTitaniumWall
 })
-
-exports = {hugeCopperWall, hugeTitaniumWall}
