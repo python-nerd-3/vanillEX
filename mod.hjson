@@ -1,0 +1,8 @@
+{
+    name: "vanillEX"
+    displayName: "[#9966cc]vanillEX[]"
+    author: "sc3d (IGN Random Memer)"
+    description: "[In very early development] A Mindustry mod that adds new features to the game that blend in with the original"
+    version: 0.1
+    minGameVersion: 136.1
+}
