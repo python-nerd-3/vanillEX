@@ -6,7 +6,9 @@ let hugeCopperWall = extend(Wall, "huge-copper-wall", {
     requirements: ItemStack.with(Items.copper, 54),
     buildCostMultiplier: 7,
     buildVisibility: BuildVisibility.shown,
-    research: Blocks.copperWallLarge
+    research: Blocks.copperWallLarge,
+    localizedName: "Huge Copper Wall",
+    description: "[vanillEX] Protects structures from enemy projectiles."
 })
 
 let hugeTitaniumWall = extend(Wall, "huge-titanium-wall", {
@@ -15,7 +17,9 @@ let hugeTitaniumWall = extend(Wall, "huge-titanium-wall", {
     requirements: ItemStack.with(Items.titanium, 54),
     buildCostMultiplier: 14,
     buildVisibility: BuildVisibility.shown,
-    research: Blocks.titaniumWallLarge
+    research: Blocks.titaniumWallLarge,
+    localizedName: "Huge Titanium Wall",
+    description: "[vanillEX] Protects structures from enemy projectiles."
 })
 
 
@@ -31,7 +35,10 @@ let graphiteBridge = extend(ItemBridge, "graphite-bridge", {
     requirements: ItemStack.with(Items.graphite, 10, Items.metaglass, 5, Items.copper, 3),
     range: 5,
     bridgeWidth: 8,
-    research: Blocks.titaniumConveyor
+    buildVisibility: BuildVisibility.shown,
+    research: Blocks.titaniumConveyor,
+    localizedName: "Graphite Bridge",
+    description: "[vanillEX] Transports items over terrain or buildings. Has a longer range than a standard bridge."
 })
 
-Blocks.armoredConveyor.junctionReplacement = graphiteBridge
+Blocks.titaniumConveyor.bridgeReplacement = graphiteBridge
