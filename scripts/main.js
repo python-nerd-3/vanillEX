@@ -18,6 +18,20 @@ let hugeTitaniumWall = extend(Wall, "huge-titanium-wall", {
     research: Blocks.titaniumWallLarge
 })
 
+
 // you're welcome
 copperWallLarge.buildCostMultiplier = 3
 titaniumWallLarge.buildCostMultiplier = 6
+
+// conveyors
+
+let graphiteBridge = extend(ItemBridge, "graphite-bridge", {
+    health: 60,
+    buildCostMultiplier: 0.4,
+    requirements: ItemStack.with(Items.graphite, 10, Items.metaglass, 5, Items.copper, 3),
+    range: 5,
+    bridgeWidth: 8,
+    research: Blocks.titaniumConveyor
+})
+
+Blocks.plastaniumConveyor.junctionReplacement = graphiteBridge
