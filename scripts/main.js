@@ -20,8 +20,8 @@ let hugeTitaniumWall = extend(Wall, "huge-titanium-wall", {
 
 
 // you're welcome
-copperWallLarge.buildCostMultiplier = 3
-titaniumWallLarge.buildCostMultiplier = 6
+Blocks.copperWallLarge.buildCostMultiplier = 3
+Blocks.titaniumWallLarge.buildCostMultiplier = 6
 
 // conveyors
 
@@ -34,4 +34,4 @@ let graphiteBridge = extend(ItemBridge, "graphite-bridge", {
     research: Blocks.titaniumConveyor
 })
 
-Blocks.plastaniumConveyor.junctionReplacement = graphiteBridge
+Blocks.armoredConveyor.junctionReplacement = graphiteBridge
