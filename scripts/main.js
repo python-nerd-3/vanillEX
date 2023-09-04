@@ -79,7 +79,7 @@ let hugePhaseWall = extend(Wall, "huge-surge-wall", {
 let hugeBerylliumWall = extend(Wall, "huge-surge-wall", {
     size: 3,
     health: 5400,
-    requirements: ItemStack.with(Items.beryllium),
+    requirements: ItemStack.with(Items.beryllium, 54),
     buildCostMultiplier: 15,
     buildVisibility: BuildVisibility.shown,
     research: { parent: Blocks.berylliumWallLarge },
