@@ -150,7 +150,9 @@ let lyche = extend(Turret, "lyche", {
     ammoUseEffect: Blocks.lancer.ammoUseEffect,
     shootCone: 12,
     shootSound: Sounds.cannon,
-    reload: 62
+    reload: 62,
+    buildVisibility: BuildVisibility.shown,
+    research: Blocks.salvo
 })
 
 Blocks.titaniumConveyor.bridgeReplacement = titaniumBridge
