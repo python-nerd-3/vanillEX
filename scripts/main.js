@@ -123,4 +123,34 @@ let pulseBridge = extend(LiquidBridge, "pulse-bridge", {
     description: "Transports liquids over terrain or buildings. Has a longer range than a standard bridge conduit."
 })
 
+let lycheBullet = extend(BasicBulletType, "lyche-bullet", {
+    // i know SapBulletType exists but it's for units
+    backColor: "674673",
+    frontColor: "764c7e",
+    speed: 2.5,
+    damage: 50,
+    lifetime: 90,
+    status: StatusEffects.sapped,
+    statusDuration: 300,
+    hitSound: Sounds.sap
+})
+
+let lyche = extend(Turret, "lyche", {
+    health: 1200,
+    requirements: ItemStack.with(Items.titanium, 80, Items.silicon, 70, Items.lead, 70),
+    localizedName: "Lyche",
+    description: "Fires spore-infected bullets at ground targets, sapping them.",
+    maxAmmo: 40,
+    inaccuracy: 1,
+    targetAir: false,
+    targetUnderBlocks: false,
+    unitSort: UnitSorts.strongest,
+    range: 200,
+    heatColor: "764c7e",
+    ammoUseEffect: Blocks.lancer.ammoUseEffect,
+    shootCone: 12,
+    shootSound: Sounds.cannon,
+    reload: 62
+})
+
 Blocks.titaniumConveyor.bridgeReplacement = titaniumBridge
