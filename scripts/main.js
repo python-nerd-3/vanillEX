@@ -63,20 +63,20 @@ let hugeSurgeWall = extend(Wall, "huge-surge-wall", {
     lightningChance: 8,
 })
 
-let hugePhaseWall = extend(Wall, "huge-surge-wall", {
+let hugePhaseWall = extend(Wall, "huge-phase-wall", {
     size: 3,
     health: 5400,
     requirements: ItemStack.with(Items.phaseFabric, 54),
     buildCostMultiplier: 18.2,
     buildVisibility: BuildVisibility.shown,
     research: { parent: Blocks.phaseWallLarge },
-    localizedName: "Huge Surge Wall",
+    localizedName: "Huge Phase Wall",
     category: Category.defense,
     description: "Protects structures from enemy projectiles, reflecting most bullets upon impact.",
     deflectChance: 13
 })
 
-let hugeBerylliumWall = extend(Wall, "huge-surge-wall", {
+let hugeBerylliumWall = extend(Wall, "huge-beryllium-wall", {
     size: 3,
     health: 5400,
     requirements: ItemStack.with(Items.beryllium, 54),
