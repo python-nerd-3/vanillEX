@@ -125,8 +125,8 @@ let pulseBridge = extend(LiquidBridge, "pulse-bridge", {
 
 let lycheBullet = extend(BasicBulletType, "lyche-bullet", {
     // i know SapBulletType exists but it's for units
-    backColor: Color.valueOf("674673"),
-    frontColor: Color.valueOf("764c7e"),
+    // backColor: Color.valueOf("674673"),
+    // frontColor: Color.valueOf("764c7e"),
     speed: 2.5,
     damage: 50,
     lifetime: 90,
@@ -146,7 +146,7 @@ let lyche = extend(Turret, "lyche", {
     targetUnderBlocks: false,
     unitSort: UnitSorts.strongest,
     range: 200,
-    heatColor: Color.valueOf("764c7e"),
+    // heatColor: Color.valueOf("764c7e"),
     ammoUseEffect: Blocks.lancer.ammoUseEffect,
     shootCone: 12,
     shootSound: Sounds.cannon,
