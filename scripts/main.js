@@ -144,9 +144,8 @@ let lyche = extend(ItemTurret, "lyche", {
     buildVisibility: BuildVisibility.shown,
     research: Blocks.salvo,
     size: 2,
-    ammoTypes: OrderedMap().put(Items.sporePod, {
+    ammoTypes: OrderedMap().put(Items.sporePod, new BasicBulletType({
         // i know SapBulletType exists but it's for units
-        type: BasicBulletType,
         backColor: Color.valueOf("674673"),
         frontColor: Color.valueOf("764c7e"),
         speed: 2.5,
@@ -157,7 +156,7 @@ let lyche = extend(ItemTurret, "lyche", {
         hitSound: Sounds.sap,
         sprite: "bullet",
         backSprite: null
-    })
+    }))
 })
 
 Blocks.titaniumConveyor.bridgeReplacement = titaniumBridge
