@@ -125,7 +125,7 @@ let pulseBridge = extend(LiquidBridge, "pulse-bridge", {
 
 // turrets and bullets
 
-let lyche = extend(Turret, "lyche", {
+let lyche = extend(ItemTurret, "lyche", {
     health: 1200,
     requirements: ItemStack.with(Items.titanium, 80, Items.silicon, 70, Items.lead, 70),
     localizedName: "Lyche",
@@ -143,8 +143,10 @@ let lyche = extend(Turret, "lyche", {
     reload: 62.0,
     buildVisibility: BuildVisibility.shown,
     research: Blocks.salvo,
+    size: 2,
     ammoTypes: OrderedMap().put(Items.sporePod, {
         // i know SapBulletType exists but it's for units
+        type: BasicBulletType,
         backColor: Color.valueOf("674673"),
         frontColor: Color.valueOf("764c7e"),
         speed: 2.5,
