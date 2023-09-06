@@ -130,10 +130,10 @@ let lycheBullet = extend(BasicBulletType, "lyche-bullet", {
     backColor: Color.valueOf("674673"),
     frontColor: Color.valueOf("764c7e"),
     speed: 2.5,
-    damage: 50,
-    lifetime: 90,
+    damage: 50.0,
+    lifetime: 90.0,
     status: StatusEffects.sapped,
-    statusDuration: 300,
+    statusDuration: 300.0,
     hitSound: Sounds.sap,
     sprite: "bullet",
     backSprite: null
