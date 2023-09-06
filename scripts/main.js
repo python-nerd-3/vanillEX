@@ -154,7 +154,8 @@ let lyche = extend(Turret, "lyche", {
     shootSound: Sounds.cannon,
     reload: 62,
     buildVisibility: BuildVisibility.shown,
-    research: Blocks.salvo
+    research: Blocks.salvo,
+    ammoTypes: OrderedMap().put(Items.sporePod, lycheBullet)
 })
 
 Blocks.titaniumConveyor.bridgeReplacement = titaniumBridge
