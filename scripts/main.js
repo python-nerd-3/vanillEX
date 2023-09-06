@@ -140,8 +140,8 @@ let lycheBullet = extend(BasicBulletType, "lyche-bullet", {
 let lyche = extend(Turret, "lyche", {
     health: 1200,
     requirements: ItemStack.with(Items.titanium, 80, Items.silicon, 70, Items.lead, 70),
-    // localizedName: "Lyche",
-    // description: "Fires spore-infected bullets at ground targets, sapping them.",
+    localizedName: "Lyche",
+    description: "Fires spore-infected bullets at ground targets, sapping them.",
     maxAmmo: 40,
     inaccuracy: 1,
     targetAir: false,
