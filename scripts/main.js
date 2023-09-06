@@ -135,8 +135,8 @@ let lycheBullet = extend(BasicBulletType, {
     status: StatusEffects.sapped,
     statusDuration: 300.0,
     hitSound: Sounds.sap,
-    sprite: "bullet",
-    backSprite: null
+    despawnEffect: Fx.none,
+    hitEffect: Fx.none
 })
 
 let lyche = extend(ItemTurret, "lyche", {
@@ -151,7 +151,7 @@ let lyche = extend(ItemTurret, "lyche", {
     unitSort: UnitSorts.strongest,
     range: 200.0,
     heatColor: Color.valueOf("764c7e"),
-    ammoUseEffect: Blocks.lancer.ammoUseEffect,
+    ammoUseEffect: Fx.none,
     shootCone: 12.0,
     shootSound: Sounds.cannon,
     reload: 62.0,
