@@ -125,6 +125,20 @@ let pulseBridge = extend(LiquidBridge, "pulse-bridge", {
 
 // turrets and bullets
 
+let lycheBullet = extend(BasicBulletType, {
+    // i know SapBulletType exists but it's for units
+    backColor: Color.valueOf("674673"),
+    frontColor: Color.valueOf("764c7e"),
+    speed: 2.5,
+    damage: 50.0,
+    lifetime: 90.0,
+    status: StatusEffects.sapped,
+    statusDuration: 300.0,
+    hitSound: Sounds.sap,
+    sprite: "bullet",
+    backSprite: null
+})
+
 let lyche = extend(ItemTurret, "lyche", {
     health: 1200,
     requirements: ItemStack.with(Items.titanium, 80, Items.silicon, 70, Items.lead, 70),
@@ -144,19 +158,7 @@ let lyche = extend(ItemTurret, "lyche", {
     buildVisibility: BuildVisibility.shown,
     research: Blocks.salvo,
     size: 2,
-    ammoTypes: OrderedMap().put(Items.sporePod, extend(BasicBulletType, {
-        // i know SapBulletType exists but it's for units
-        backColor: Color.valueOf("674673"),
-        frontColor: Color.valueOf("764c7e"),
-        speed: 2.5,
-        damage: 50.0,
-        lifetime: 90.0,
-        status: StatusEffects.sapped,
-        statusDuration: 300.0,
-        hitSound: Sounds.sap,
-        sprite: "bullet",
-        backSprite: null
-    }))
+    ammoTypes: OrderedMap().put(Items.sporePod, lycheBullet)
 })
 
 Blocks.titaniumConveyor.bridgeReplacement = titaniumBridge
