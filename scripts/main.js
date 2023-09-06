@@ -123,6 +123,8 @@ let pulseBridge = extend(LiquidBridge, "pulse-bridge", {
     description: "Transports liquids over terrain or buildings. Has a longer range than a standard bridge conduit."
 })
 
+// turrets and bullets
+
 let lycheBullet = extend(BasicBulletType, "lyche-bullet", {
     // i know SapBulletType exists but it's for units
     // backColor: Color.valueOf("674673"),
@@ -138,8 +140,8 @@ let lycheBullet = extend(BasicBulletType, "lyche-bullet", {
 let lyche = extend(Turret, "lyche", {
     health: 1200,
     requirements: ItemStack.with(Items.titanium, 80, Items.silicon, 70, Items.lead, 70),
-    localizedName: "Lyche",
-    description: "Fires spore-infected bullets at ground targets, sapping them.",
+    // localizedName: "Lyche",
+    // description: "Fires spore-infected bullets at ground targets, sapping them.",
     maxAmmo: 40,
     inaccuracy: 1,
     targetAir: false,
