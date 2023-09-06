@@ -144,7 +144,7 @@ let lyche = extend(ItemTurret, "lyche", {
     buildVisibility: BuildVisibility.shown,
     research: Blocks.salvo,
     size: 2,
-    ammoTypes: OrderedMap().put(Items.sporePod, new BasicBulletType({
+    ammoTypes: OrderedMap().put(Items.sporePod, extend(BasicBulletType, {
         // i know SapBulletType exists but it's for units
         backColor: Color.valueOf("674673"),
         frontColor: Color.valueOf("764c7e"),
