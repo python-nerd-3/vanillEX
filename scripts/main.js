@@ -65,7 +65,7 @@ let hugeSurgeWall = extend(Wall, "huge-surge-wall", {
 
 let hugePhaseWall = extend(Wall, "huge-phase-wall", {
     size: 3,
-    health: 5400,
+    health: 8280,
     requirements: ItemStack.with(Items.phaseFabric, 54),
     buildCostMultiplier: 18.2,
     buildVisibility: BuildVisibility.shown,
@@ -78,7 +78,7 @@ let hugePhaseWall = extend(Wall, "huge-phase-wall", {
 
 let hugeBerylliumWall = extend(Wall, "huge-beryllium-wall", {
     size: 3,
-    health: 5400,
+    health: 4680,
     requirements: ItemStack.with(Items.beryllium, 54),
     buildCostMultiplier: 15,
     buildVisibility: BuildVisibility.shown,
@@ -132,7 +132,7 @@ let lycheBullet = extend(BasicBulletType, {
     lightRadius: 1,
     lightColor: Color.valueOf("#8674c4"),
     speed: 2.5,
-    damage: 50.0,
+    damage: 60.0,
     lifetime: 90.0,
     status: StatusEffects.sapped,
     statusDuration: 300.0,
@@ -146,7 +146,7 @@ let lyche = extend(ItemTurret, "lyche", {
     requirements: ItemStack.with(Items.titanium, 80, Items.silicon, 70, Items.lead, 70),
     localizedName: "Lyche",
     description: "Fires spore-infected bullets at ground targets, sapping them.",
-    maxAmmo: 40,
+    maxAmmo: 15,
     inaccuracy: 1,
     targetAir: false,
     targetUnderBlocks: false,
@@ -177,7 +177,8 @@ let gold = extend(Item, "gold", {
     color: Color.valueOf("ffd700"),
     cost: 5,
     healthScaling: 0.02,
-    charge: 5
+    charge: 5,
+    localizedName: "Gold"
 })
 
 let sandboxProcessor = extend(LogicBlock, "sandbox-processor", {
@@ -187,7 +188,8 @@ let sandboxProcessor = extend(LogicBlock, "sandbox-processor", {
     maxInstructionsPerTick: 200,
     localizedName: "Sandbox Processor",
     description: "Runs a sequence of logic instructions in a loop. Can be used to control units and buildings. Only usable in sandbox.",
-    buildVisibility: BuildVisibility.sandboxOnly
+    buildVisibility: BuildVisibility.sandboxOnly,
+    category: Category.logic
 })
 
 // tweaks
