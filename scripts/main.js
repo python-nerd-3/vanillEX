@@ -165,4 +165,33 @@ let lyche = extend(ItemTurret, "lyche", {
 
 lyche.ammoTypes.put(Items.sporePod, lycheBullet)
 
+// other
+
+let goldNugget = extend(Item, "gold-nugget", {
+    color: Color.valueOf("c9aa00"),
+    buildable: false,
+    charge: 0.5
+})
+
+let gold = extend(Item, "gold", {
+    color: Color.valueOf("ffd700"),
+    cost: 5,
+    healthScaling: 0.02,
+    charge: 5
+})
+
+let sandboxProcessor = extend(LogicBlock, "sandbox-processor", {
+    maxInstructionScale: 100,
+    instructionsPerTick: 50,
+    range: 1000,
+    maxInstructionsPerTick: 200,
+    localizedName: "Sandbox Processor",
+    description: "Runs a sequence of logic instructions in a loop. Can be used to control units and buildings. Only usable in sandbox.",
+    buildVisibility: BuildVisibility.sandboxOnly
+})
+
+// tweaks
+
 Blocks.titaniumConveyor.bridgeReplacement = titaniumBridge
+UnitTypes.latum.hidden = false
+UnitTypes.renale.hidden = false
